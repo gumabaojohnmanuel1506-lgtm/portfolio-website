@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Manuel M. Gumabao — Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fixed top navigation with section links -->
+  <nav>
+    <div></div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- Home: name, degree, and specialization -->
+    <section id="home" class="block">
+      <div class="home-text fade-in">
+        <h1 class="home-name">John Manuel M. Gumabao</h1>
+        <p class="home-course">BS Information Technology</p>
+        <span class="home-spec">Front-end / Designing</span>
+      </div>
+    </section>
+
+    <!-- GitHub Repositories (populated by script) -->
+    <section id="github" class="block fade-in">
+      <h2 class="section-title">GitHub Repositories</h2>
+      <div id="github-repos" class="projects-grid">
+        <!-- JS will populate repo cards here -->
+      </div>
+    </section>
+
+    <!-- About and Skills displayed side by side -->
+    <div class="grid-2">
+
+      <!-- About: career goal, interests, specialization, and degree -->
+      <section id="about" class="block fade-in">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-card">
+          <div class="about-card-label">Career Goal</div>
+          <div class="about-card-value">Game Developer</div>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card-label">Area of Interest</div>
+          <div class="about-card-value">Game Development</div>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card-label">Specialization</div>
+          <div class="about-card-value">Front-end / Designing</div>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card-label">Degree</div>
+          <div class="about-card-value">BS Information Technology</div>
+        </div>
+      </section>
+
+      <!-- Skills: grouped by category -->
+      <section id="skills" class="block fade-in">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills-grid">
+
+          <div class="skill-group">
+            <div class="skill-group-title">Programming Languages</div>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">JavaScript</span>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title">Web Technologies</div>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title">Databases</div>
+            <span class="skill-tag">MySQL</span>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title">Tools &amp; IDEs</div>
+            <span class="skill-tag">Android Studio</span>
+            <span class="skill-tag">IntelliJ IDEA</span>
+            <span class="skill-tag">Visual Studio</span>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Projects: four project cards with screenshot, title, description, and tech used -->
+    <section id="projects" class="block fade-in">
+      <h2 class="section-title projects-title">Projects</h2>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: INVision inventory system -->
+        <div class="project-card">
+          <div class="project-screenshot">
+            <!-- Replace src with InformationManagement_INVision.png when available -->
+            <img src="InformationManagement_INVision.jpg" alt="INVision screenshot" data-hide-disclaimer="true" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="screenshot-placeholder" style="display:none">
+              <span class="screenshot-icon">[ IMG ]</span>
+              InformationManagement_INVision.png
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-title">INVision: Inventory and Cost Management System for Building Projects</div>
+            <p class="project-desc">An inventory system built for FMDC's internal handling of procurement of materials and projects they are allotted.</p>
+            <div class="tech-list">
+              <span class="tech-badge">Java</span>
+              <span class="tech-badge">MySQL</span>
+              <span class="tech-badge">IntelliJ IDEA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Water Level Game -->
+        <div class="project-card">
+          <div class="project-screenshot">
+            <!-- Replace src with Robotics_WaterLevel.png when available -->
+            <img src="Robotics_WaterLevelGame.jpg" alt="Water Level Game screenshot" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="screenshot-placeholder" style="display:none">
+              <span class="screenshot-icon">[ IMG ]</span>
+              Robotics_WaterLevel.png
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-title">Water Level Game</div>
+            <p class="project-desc">An Arduino powered project which mainly consists of LCD, LED, Servo Motor, and Water Level Sensor. In order to win the game, you need to maintain the level of water shown in the LCD by moving the Water Level Sensor.</p>
+            <div class="tech-list">
+              <span class="tech-badge">Arduino</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Creeper -->
+        <div class="project-card">
+          <div class="project-screenshot">
+            <!-- Replace src with Robotics_Creeper.png when available -->
+            <img src="Robotics_Creeper.jpg" alt="Creeper screenshot" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="screenshot-placeholder" style="display:none">
+              <span class="screenshot-icon">[ IMG ]</span>
+              Robotics_Creeper.png
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-title">Creeper</div>
+            <p class="project-desc">An Arduino powered project which mainly consists of LED, LCD, Button, Servo Motor, and Motion Sensor. When you press the button, the Servo Motor moves the head of the Creeper 180 degrees sideways. If an object is detected, the distance between the object is shown in the LCD and the closer the object the more LEDs are lit.</p>
+            <div class="tech-list">
+              <span class="tech-badge">Arduino</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Apat Dapat Dapat Apat Minus One -->
+        <div class="project-card">
+          <div class="project-screenshot">
+            <!-- Replace src with Robotics_ApatDapatDapatApatMinusOne.png when available -->
+            <img src="Robotics_ApatDapatDapatApatMinusOne.jpg" alt="Apat Dapat Dapat Apat Minus One screenshot" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="screenshot-placeholder" style="display:none">
+              <span class="screenshot-icon">[ IMG ]</span>
+              Robotics_ApatDapatDapatApatMinusOne.png
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-title">Apat Dapat Dapat Apat Minus One</div>
+            <p class="project-desc">An Arduino powered project which mainly consists of RGB, LED, LCD, Button, and Joystick. A two-player turn-based game consisting of three different mini-games which are Connect 4, Mine Sweeper, Memory Game.</p>
+            <div class="tech-list">
+              <span class="tech-badge">Arduino</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Contact section -->
+  <section id="contact" class="block fade-in">
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact-container">
+      <form id="contact-form" class="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="from_name" type="text" placeholder="Your name" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="reply_to" type="email" placeholder="your@email.com" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Write a short message" required></textarea>
+
+        <button type="submit" id="contact-submit">Send Message</button>
+        <div id="contact-status" class="contact-status" aria-live="polite"></div>
+        
+        <div class="contact-actions">
+          <button type="button" id="inquiry-open" class="inquiry-button">PROJECT INQUIRY FORM</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Project Inquiry Modal -->
+  <div id="inquiry-modal" class="inquiry-modal" aria-hidden="true">
+    <div class="inquiry-dialog" role="dialog" aria-modal="true" aria-labelledby="inquiry-title">
+      <button class="inquiry-close" id="inquiry-close" aria-label="Close">&times;</button>
+      <h3 id="inquiry-title">Project Inquiry Form</h3>
+      <form id="inquiry-form" class="inquiry-form" novalidate>
+        <div class="inquiry-header">
+          <div id="step-dots" class="step-dots">
+            <div class="step-node" data-index="0"><span class="num">1</span></div>
+            <div class="step-node" data-index="1"><span class="num">2</span></div>
+            <div class="step-node" data-index="2"><span class="num">3</span></div>
+          </div>
+        </div>
+        <fieldset class="step">
+          <legend>A. CLIENT'S INFORMATION</legend>
+          <label for="client-name">1. Full Name</label>
+          <input id="client-name" name="client_name" type="text" required>
+
+          <label for="client-email">2. Email Address</label>
+          <input id="client-email" name="client_email" type="email" required>
+
+          <label for="client-company">3. Company / Organization Name (If applicable)</label>
+          <input id="client-company" name="client_company" type="text">
+
+          <label for="client-website">4. Website (If applicable)</label>
+          <input id="client-website" name="client_website" type="url">
+        </fieldset>
+
+        <fieldset class="step">
+          <legend>B. PROJECT OVERVIEW</legend>
+          <label for="project-title">1. Project Title</label>
+          <input id="project-title" name="project_title" type="text" required>
+
+          <label for="project-desc">2. Project Description</label>
+          <textarea id="project-desc" name="project_description" rows="5" required></textarea>
+
+          <label for="project-goals">3. Primary Goals (If applicable)</label>
+          <textarea id="project-goals" name="project_goals" rows="3"></textarea>
+        </fieldset>
+
+        <fieldset class="step">
+          <legend>C. SCOPE & LOGISTICS</legend>
+          <div class="checkbox-group">
+            <label class="checkbox-title">1. Type of service/s you need?</label>
+            <label class="inline-checkbox"><input type="checkbox" name="services" value="Designing"> Designing</label>
+            <label class="inline-checkbox"><input type="checkbox" name="services" value="Front-end"> Front-end</label>
+            <label class="inline-checkbox">Others (If applicable): <input type="text" name="services_other" placeholder="Specify"></label>
+          </div>
+
+          <label for="start-date">2. Estimated Start Date (If applicable)</label>
+          <input id="start-date" name="start_date" type="date">
+
+          <label for="end-date">3. Desired Completion Date (If applicable)</label>
+          <input id="end-date" name="end_date" type="date">
+
+          <label>4. Estimated Budget Range (If applicable)</label>
+          <div class="budget-options">
+            <label class="inline-checkbox"><input type="radio" name="budget" value="Under $5,000"> Under $5,000</label>
+            <label class="inline-checkbox"><input type="radio" name="budget" value="$5,000 – $10,000"> $5,000 – $10,000</label>
+            <label class="inline-checkbox"><input type="radio" name="budget" value="$10,000 – $25,000"> $10,000 – $25,000</label>
+            <label class="inline-checkbox"><input type="radio" name="budget" value="$25,000+"> $25,000+</label>
+          </div>
+        </fieldset>
+
+        <div class="inquiry-actions">
+          <button type="button" id="inquiry-prev" class="inquiry-nav">Back</button>
+          <button type="button" id="inquiry-next" class="inquiry-nav">Next</button>
+          <button type="submit" id="inquiry-submit">Send Inquiry</button>
+          <button type="button" id="inquiry-cancel">Cancel</button>
+        </div>
+        <div id="inquiry-status" class="inquiry-status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer: copyright notice -->
+  <footer>
+    <div></div>
+    <div class="footer-copy">2025 — All Rights Reserved</div>
+  </footer>
+
+  <div id="image-modal" class="modal">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="modal-img" alt="Enlarged screenshot">
+    <div id="modal-placeholder" class="modal-placeholder" style="display:none"></div>
+    <p class="modal-disclaimer"><em>The image shown is an AI-generated representation intended for illustrative purposes only. All critical design elements and components remain consistent with the original project.</em></p>
+  </div>
+  
+  <!-- Main script -->
+    <script src="script.js"></script>
+
+</body>
+</html>
