@@ -591,3 +591,51 @@ if (inquiryForm) {
     }, 900 + Math.random() * 900);
   });
 }
+
+// --- GitHub API Integration ---
+
+const githubUsername = 'gumabaojohnmanuel1506-lgtm'; // Insert your actual username here
+const reposContainer = document.getElementById('github-repos');
+
+async function fetchGitHubRepos() {
+  if (!reposContainer) return; // Exit if the container isn't on the page
+
+  try {
+    // Fetch repositories, sorted by most recently updated. We limit to 6 using per_page.
+    const response = await fetch(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=6`);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const repos = await response.json();
+    reposContainer.innerHTML = ''; // Clear the "Loading..." text
+
+    // Loop through the fetched repositories and create HTML cards for them
+    repos.forEach(repo => {
+      const repoCard = document.createElement('div');
+      repoCard.classList.add('repo-card');
+      
+      // Handle missing descriptions gracefully
+      const description = repo.description ? repo.description : 'No description provided.';
+
+      repoCard.innerHTML = `
+        <h3 class="repo-title"><a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">${repo.name}</a></h3>
+        <p class="repo-desc">${description}</p>
+        <div class="repo-stats">
+          <span>⭐ ${repo.stargazers_count}</span>
+          <span>🍴 ${repo.forks_count}</span>
+        </div>
+      `;
+      
+      reposContainer.appendChild(repoCard);
+    });
+
+  } catch (error) {
+    console.error('Error fetching GitHub repos:', error);
+    reposContainer.innerHTML = '<p>Failed to load repositories. Please check back later.</p>';
+  }
+}
+
+// Execute the function
+fetchGitHubRepos();
