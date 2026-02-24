@@ -947,3 +947,54 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     right: 20px;
   }
 }
+
+/* GitHub Repositories Grid */
+.github-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Individual Repo Card */
+.repo-card {
+  background: #2a2a2a; /* Matches your modal placeholder background */
+  border: 2px solid var(--yellow);
+  padding: 24px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.repo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(245, 200, 0, 0.1);
+}
+
+.repo-title a {
+  color: var(--yellow);
+  text-decoration: none;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.repo-title a:hover {
+  text-decoration: underline;
+}
+
+.repo-desc {
+  color: var(--cream);
+  font-size: 0.9rem;
+  margin: 15px 0;
+  flex-grow: 1; /* Pushes stats to the bottom */
+}
+
+.repo-stats {
+  color: var(--cream);
+  font-size: 0.85rem;
+  display: flex;
+  gap: 15px;
+  opacity: 0.8;
+}
